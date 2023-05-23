@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}  
+{% block content %}
+{% for food in foods %}
+<div class = "container">
+    <h2>{{ food.name }}</h2>
+    <p>Amount: {{food.amount }}</p>
+    <p>Description: {{ food.description }}</p>
+    <p>Category: {{ food.category }}</p>
+    <a href="{% url 'food_update' food.pk %}">Edit</a>
+    <a href="{% url 'food_detail' food.pk %}">Details</a>
+</div>
+{% endfor %}
+{% endblock content %}
