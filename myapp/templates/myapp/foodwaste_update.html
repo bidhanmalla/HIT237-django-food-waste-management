@@ -1,7 +1,6 @@
-
 {% extends 'myapp/base.html' %}  
 {% block content %}
-<div class = "container">
+<div class = "form-group">
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} Food Waste Tracker {% endblock title %}</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/> -->
     <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
-    <link 
-    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-    rel="stylesheet"  type='text/css'>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
       
   </head>
   <body>
@@ -23,6 +21,8 @@
         <div class="container-fluid">
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'foodcategory_list' %}">Food Category</a></li>
+                <li><a href="{% url 'wastecategory_list' %}">Food Waste Category</a></li>
                 <li><a href="{% url 'food_list' %}">Food List</a></li>
                 <li><a href="{% url 'food_create' %}">Create Food</a></li>
                 <li><a href="{% url 'foodwaste_list' %}">Food Waste List</a></li>
